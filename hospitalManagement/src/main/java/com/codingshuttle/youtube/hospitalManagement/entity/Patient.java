@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.ToString;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @ToString
@@ -20,5 +21,8 @@ public class Patient {
     @OneToOne
     @JoinColumn(name = "insaurance_id", referencedColumnName = "id")  // owner side of the relationship
     private Insaurance insaurance;
+
+    @OneToMany(mappedBy = "patient")
+    private List<Appointment> appointments;
 
 }

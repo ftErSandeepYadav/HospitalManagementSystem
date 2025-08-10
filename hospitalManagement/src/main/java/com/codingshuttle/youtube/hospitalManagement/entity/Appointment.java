@@ -23,6 +23,12 @@ public class Appointment {
     @Column(length = 500)
     private String reasonForVisit;
 
-    // Constructors, getters, and setters can be added here
+    @ManyToOne
+    @JoinColumn(name = "patient_id", nullable = false)
+    private Patient patient;
+
+    @ManyToOne()
+    @JoinColumn(name = "doctor_id", nullable = false)
+    private Doctor doctor;
 
 }

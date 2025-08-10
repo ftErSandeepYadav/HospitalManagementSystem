@@ -26,4 +26,11 @@ public class InsauranceService {
         return patient ;
     }
 
+    @Transactional
+    public Patient disAssociateInsauranceFromPatient(Long patientId){
+        Patient patient = patientRepository.findById(patientId).orElseThrow() ;
+        patient.setInsaurance(null);
+        return patient ;
+    }
+
 }

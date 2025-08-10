@@ -14,7 +14,7 @@ public class InsauranceTest {
     private InsauranceService insauranceService;
 
     @Test
-    public void testInsaurance(){
+    public void testInsaurance() {
         Insaurance insaurance = Insaurance.builder()
                 .provider("HealthCare Inc.")
                 .policyNumber("HC1423456")
@@ -25,6 +25,12 @@ public class InsauranceTest {
         Patient patient = insauranceService.assignInsauranceToPatient(insaurance, 1L);
         System.out.println("Insaurance after assignment to patient : " + insaurance);
         System.out.println(patient);
+    }
 
+    @Test
+    public void testDisAssociateInsauranceFromPatient() {
+        testInsaurance();
+        Patient patient = insauranceService.disAssociateInsauranceFromPatient(1L);
+        System.out.println("Patient after disassociating insaurance: " + patient);
     }
 }

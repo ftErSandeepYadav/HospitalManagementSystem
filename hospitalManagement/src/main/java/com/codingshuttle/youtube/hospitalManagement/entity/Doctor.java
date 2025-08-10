@@ -1,9 +1,7 @@
 package com.codingshuttle.youtube.hospitalManagement.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -11,6 +9,7 @@ import java.util.Set;
 @Entity
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
 public class Doctor {
     // Define fields for doctor details
@@ -28,6 +27,7 @@ public class Doctor {
     private String email;
 
     @ManyToMany(mappedBy = "doctors")
+    @ToString.Exclude
     private Set<Department> departments = new HashSet<>() ;
 
 }

@@ -9,3 +9,10 @@ INSERT INTO patient (name, date_of_birth, email, gender, blood_group, insaurance
 ('Grace Lee', '1997-09-12', 'grace.lee@example.com', 'Female', 'AB+', NULL),
 ('Henry Taylor', '1982-04-18', 'henry.taylor@example.com', 'Male', 'O+', NULL),
 ('Isabella Martinez', '1999-08-22', 'isabella.martinez@example.com', 'Female', 'A-', NULL);
+
+INSERT INTO doctor (name, specialization, email) VALUES
+('Dr. John Smith', 'General Medicine', 'dr.john.smith@example.com'),
+('Dr. Jane Doe', 'Pediatrics', 'dr.jane.doe@example.com'),
+('Dr. Alice Brown', 'Cardiology', 'dr.alice.brown@example.com'),
+('Dr. Bob White', 'Orthopedics', 'dr.bob.white@example.com'),
+('Dr. Charlie Green', 'Neurology', 'dr.charlie.green@example.com');

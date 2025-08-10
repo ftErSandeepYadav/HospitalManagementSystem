@@ -15,6 +15,10 @@ public class Patient {
     private LocalDate dateOfBirth;
     private String email;
     private String gender ;
+    private String bloodGroup;
 
+    @OneToOne
+    @JoinColumn(name = "insaurance_id", referencedColumnName = "id")  // owner side of the relationship
+    private Insaurance insaurance;
 
 }

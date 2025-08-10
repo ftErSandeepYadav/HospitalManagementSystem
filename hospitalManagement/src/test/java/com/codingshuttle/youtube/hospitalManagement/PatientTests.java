@@ -45,12 +45,12 @@ public class PatientTests {
 //        int rowCount = patientRepository.updateNameWithId("Sandeep Yadav", 1L);
 //        System.out.println(1 + " row(s) updated.");
 
-        Page<Patient> patientPage = patientRepository.findAllPatients(PageRequest.of(0, 25, Sort.by("name"))) ;
-        System.out.println("Total Pages: " + patientPage.getTotalPages());
-        System.out.println("Total Elements: " + patientPage.getTotalElements());
-        for(Patient patient: patientPage){
-            System.out.println(patient);
-        }
+//        Page<Patient> patientPage = patientRepository.findAllPatients(PageRequest.of(0, 25, Sort.by("name"))) ;
+//        System.out.println("Total Pages: " + patientPage.getTotalPages());
+//        System.out.println("Total Elements: " + patientPage.getTotalElements());
+//        for(Patient patient: patientPage){
+//            System.out.println(patient);
+//        }
 
     }
 

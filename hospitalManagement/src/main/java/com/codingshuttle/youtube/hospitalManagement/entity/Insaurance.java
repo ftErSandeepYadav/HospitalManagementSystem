@@ -1,15 +1,16 @@
 package com.codingshuttle.youtube.hospitalManagement.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
+@Builder
 public class Insaurance {
 
     @Id
@@ -28,6 +29,7 @@ public class Insaurance {
     private LocalDateTime createdAt;
 
     @OneToOne(mappedBy = "insaurance")  // inverse side of the relationship
+    @ToString.Exclude
     private Patient patient;
 
 }
